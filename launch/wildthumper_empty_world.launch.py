@@ -58,10 +58,10 @@ def generate_launch_description():
             [
                 PathJoinSubstitution(
                     [
-                        FindPackageShare("ardupilot_gz_bringup"),
+                        FindPackageShare("iceberg_sim"),
                         "launch",
                         "robots",
-                        "wildthumper.launch.py",
+                        "iceberg_wildthumper.launch.py",
                     ]
                 ),
             ]
