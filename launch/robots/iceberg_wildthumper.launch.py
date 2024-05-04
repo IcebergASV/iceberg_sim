@@ -141,7 +141,7 @@ def generate_launch_description():
 
         robot_desc = robot_desc.replace(
             "model://wildthumper_with_lidar",
-            "package://iceberg_sim/models/wildthumper_with_lidar")
+            "package://iceberg_sim/models/iceberg_wildthumper")
 
     # Publish /tf and /tf_static.
     robot_state_publisher = Node(
