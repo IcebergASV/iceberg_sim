@@ -7,6 +7,8 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+include_directories(${GAZEBO_INCLUDE_DIRS})
+link_directories(${GAZEBO_LIBRARY_DIRS})
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -22,5 +24,23 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+# Install project launch files.
+install(
+  DIRECTORY
+    launch/
+  DESTINATION share/${PROJECT_NAME}/launch
+)
+
+install(
+  DIRECTORY worlds/
+  DESTINATION share/${PROJECT_NAME}/worlds
+)
+
+install(
+  DIRECTORY
+    models/
+  DESTINATION share/${PROJECT_NAME}/models
+)
 
 ament_package()
