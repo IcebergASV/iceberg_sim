@@ -75,7 +75,7 @@ def generate_launch_description():
         ),
         launch_arguments={
             "gz_args": "-v4 -s -r "
-            f'{Path(pkg_project_gazebo) / "worlds" / "wildthumper_test_world.sdf"}'
+            f'{Path(pkg_project_gazebo) / "worlds" / "wildthumper_empty_world.sdf"}'
         }.items(),
     )
 
